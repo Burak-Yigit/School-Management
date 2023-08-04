@@ -9,8 +9,8 @@ namespace School.Entities.Concrete
 {
     public class Relation : IEntity
     {
-        public int RelationID { get; set; }
-        public int MotherID { get; set; }
-        public int FatherID { get; set; }
+        public int RelationId { get; set; }
+        public int MotherId { get; set; }
+        public int FatherId { get; set; }
     }
 }

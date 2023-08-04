@@ -9,7 +9,7 @@ namespace School.Entities.Concrete
 {
     public class Father : IEntity
     {
-        public int FatherID { get; set; }
+        public int FatherId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }

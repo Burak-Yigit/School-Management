@@ -29,7 +29,7 @@ namespace School.Business.Concrete
 
         public bool RelationExists(int motherID, int fatherID)
         {
-            return _relationDal.GetAll().Any(r=>r.MotherID==motherID || r.FatherID==fatherID);
+            return _relationDal.GetAll().Any(r=>r.MotherId==motherID || r.FatherId==fatherID);
         }
     }
 }

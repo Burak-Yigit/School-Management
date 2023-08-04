@@ -45,6 +45,7 @@
     <Compile Include="Concrete\Father.cs" />
     <Compile Include="Concrete\Mother.cs" />
     <Compile Include="Concrete\Relation.cs" />
+    <Compile Include="Concrete\Student.cs" />
     <Compile Include="Concrete\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
