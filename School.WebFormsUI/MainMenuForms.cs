@@ -40,9 +40,10 @@ namespace School.WebFormsUI
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnAddStudent_Click(object sender, EventArgs e)
         {
-
+            StudentForms studentForm = new StudentForms();
+            studentForm.ShowDialog();
         }
     }
 }

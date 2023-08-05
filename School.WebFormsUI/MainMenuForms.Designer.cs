@@ -33,7 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnAddStudent = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAddParent = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -75,7 +75,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button6);
+            this.groupBox1.Controls.Add(this.btnAddStudent);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.btnAddParent);
             this.groupBox1.Location = new System.Drawing.Point(23, 281);
@@ -95,16 +95,16 @@
             this.button5.Text = "Update a Student";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnAddStudent
             // 
-            this.button6.BackColor = System.Drawing.Color.FloralWhite;
-            this.button6.Location = new System.Drawing.Point(2, 99);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(156, 80);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Add a Student";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnAddStudent.BackColor = System.Drawing.Color.FloralWhite;
+            this.btnAddStudent.Location = new System.Drawing.Point(2, 99);
+            this.btnAddStudent.Name = "btnAddStudent";
+            this.btnAddStudent.Size = new System.Drawing.Size(156, 80);
+            this.btnAddStudent.TabIndex = 3;
+            this.btnAddStudent.Text = "Add a Student";
+            this.btnAddStudent.UseVisualStyleBackColor = false;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // button2
             // 
@@ -257,7 +257,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;

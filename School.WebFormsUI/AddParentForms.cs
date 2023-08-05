@@ -121,7 +121,7 @@ namespace School.WebFormsUI
             catch (Exception ex)
             {
                 // Handle any exceptions that may occur during data retrieval.
-                MessageBox.Show("An error occurred while loading the mother list: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while loading the father list: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnAddFather_Click(object sender, EventArgs e)
@@ -162,17 +162,17 @@ namespace School.WebFormsUI
                 }
                 _relationService.AddRelation(new Relation
                 {
-                    MotherID= motherID,
-                    FatherID= fatherID
+                    MotherId= motherID,
+                    FatherId= fatherID
                 });
 
                 LoadRelationList();
                 MessageBox.Show("Added Successfully");
             }
-            catch (System.Data.Entity.Infrastructure.DbUpdateException exception)
+            catch (Exception exception)
             {
 
-                MessageBox.Show("Zaten bu kişiler eklenmiş.");
+                MessageBox.Show(exception.Message);
             }
         }
     }

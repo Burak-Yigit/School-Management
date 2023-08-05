@@ -9,6 +9,8 @@ namespace School.Business.Abstract
 {
     public interface IStudentService
     {
-        List<User> GetAll();
+        List<Student> GetAll();
+        void Add(Student student);
+
     }
 }

@@ -12,5 +12,6 @@ namespace School.Entities.Concrete
         public int RelationId { get; set; }
         public int MotherId { get; set; }
         public int FatherId { get; set; }
+
     }
 }

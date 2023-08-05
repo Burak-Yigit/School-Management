@@ -14,6 +14,7 @@ namespace School.DataAccess.Concrete.EntityFramework
         public DbSet<Mother> Mothers { get; set; }
         public DbSet<Father> Fathers { get; set; }
         public DbSet<Relation> Relations { get; set; }
+        public DbSet<Student> Students { get; set; }
 
     }
 }
