@@ -45,5 +45,11 @@ namespace School.WebFormsUI
             StudentForms studentForm = new StudentForms();
             studentForm.ShowDialog();
         }
+
+        private void btnAddTeacher_Click(object sender, EventArgs e)
+        {
+            AddTeacherForms addTeacher = new AddTeacherForms();
+            addTeacher.ShowDialog();
+        }
     }
 }

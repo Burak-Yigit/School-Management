@@ -57,12 +57,14 @@
     <Compile Include="Abstract\IMotherDal.cs" />
     <Compile Include="Abstract\IRelationDal.cs" />
     <Compile Include="Abstract\IStudentDal.cs" />
+    <Compile Include="Abstract\ITeacherDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfAuthenticatorDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfEntityRepositoryBase.cs" />
     <Compile Include="Concrete\EntityFramework\EfFatherDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfMotherDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfRelationDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfStudentDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfTeacherDal.cs" />
     <Compile Include="Concrete\EntityFramework\SchoolContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

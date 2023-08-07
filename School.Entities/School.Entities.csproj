@@ -42,10 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IEntity.cs" />
+    <Compile Include="Concrete\Branch.cs" />
+    <Compile Include="Concrete\Department.cs" />
+    <Compile Include="Concrete\Employee.cs" />
     <Compile Include="Concrete\Father.cs" />
     <Compile Include="Concrete\Mother.cs" />
+    <Compile Include="Concrete\Position.cs" />
     <Compile Include="Concrete\Relation.cs" />
     <Compile Include="Concrete\Student.cs" />
+    <Compile Include="Concrete\Teacher.cs" />
     <Compile Include="Concrete\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

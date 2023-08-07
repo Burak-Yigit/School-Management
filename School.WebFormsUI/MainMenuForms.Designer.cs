@@ -42,9 +42,10 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnAddEmployee = new System.Windows.Forms.Button();
+            this.btnAddTeacher = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -182,8 +183,9 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button7);
-            this.groupBox3.Controls.Add(this.button8);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.btnAddEmployee);
+            this.groupBox3.Controls.Add(this.btnAddTeacher);
             this.groupBox3.Location = new System.Drawing.Point(377, 281);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(330, 184);
@@ -191,25 +193,27 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Teacher Registration and Update Panels";
             // 
-            // button7
+            // btnAddEmployee
             // 
-            this.button7.BackColor = System.Drawing.Color.Cornsilk;
-            this.button7.Location = new System.Drawing.Point(172, 19);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(156, 159);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Update a Teacher";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnAddEmployee.BackColor = System.Drawing.Color.FloralWhite;
+            this.btnAddEmployee.Location = new System.Drawing.Point(6, 19);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(105, 159);
+            this.btnAddEmployee.TabIndex = 6;
+            this.btnAddEmployee.Text = "Add an Employee";
+            this.btnAddEmployee.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // btnAddTeacher
             // 
-            this.button8.BackColor = System.Drawing.Color.FloralWhite;
-            this.button8.Location = new System.Drawing.Point(6, 19);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(156, 159);
-            this.button8.TabIndex = 5;
-            this.button8.Text = "Add a Teacher";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnAddTeacher.BackColor = System.Drawing.Color.FloralWhite;
+            this.btnAddTeacher.Location = new System.Drawing.Point(112, 19);
+            this.btnAddTeacher.Name = "btnAddTeacher";
+            this.btnAddTeacher.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnAddTeacher.Size = new System.Drawing.Size(105, 159);
+            this.btnAddTeacher.TabIndex = 5;
+            this.btnAddTeacher.Text = "Add a Teacher";
+            this.btnAddTeacher.UseVisualStyleBackColor = false;
+            this.btnAddTeacher.Click += new System.EventHandler(this.btnAddTeacher_Click);
             // 
             // btnLogout
             // 
@@ -221,6 +225,16 @@
             this.btnLogout.Text = "Log out";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Cornsilk;
+            this.button1.Location = new System.Drawing.Point(219, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 159);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Update a Teacher";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // MainMenuForms
             // 
@@ -262,8 +276,9 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnAddEmployee;
+        private System.Windows.Forms.Button btnAddTeacher;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button button1;
     }
 }

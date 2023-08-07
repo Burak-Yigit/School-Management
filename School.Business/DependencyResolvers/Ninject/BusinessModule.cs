@@ -29,6 +29,9 @@ namespace School.Business.DependencyResolvers.Ninject
 
             Bind<IStudentService>().To<StudentManager>();
             Bind<IStudentDal>().To<EfStudentDal>();
+
+            Bind<ITeacherService>().To<TeacherManager>();
+            Bind<ITeacherDal>().To<EfTeacherDal>();
         }
     }
 }

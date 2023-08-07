@@ -49,11 +49,13 @@
     <Compile Include="Abstract\IMotherService.cs" />
     <Compile Include="Abstract\IRelationService.cs" />
     <Compile Include="Abstract\IStudentService.cs" />
+    <Compile Include="Abstract\ITeacherService.cs" />
     <Compile Include="Concrete\AuthenticatorManager.cs" />
     <Compile Include="Concrete\FatherManager.cs" />
     <Compile Include="Concrete\MotherManager.cs" />
     <Compile Include="Concrete\RelationManager.cs" />
     <Compile Include="Concrete\StudentManager.cs" />
+    <Compile Include="Concrete\TeacherManager.cs" />
     <Compile Include="DependencyResolvers\Ninject\BusinessModule.cs" />
     <Compile Include="DependencyResolvers\Ninject\InstanceFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

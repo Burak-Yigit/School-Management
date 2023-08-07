@@ -62,6 +62,12 @@
     <Compile Include="AddParentForms.Designer.cs">
       <DependentUpon>AddParentForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddTeacherForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTeacherForms.Designer.cs">
+      <DependentUpon>AddTeacherForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForms.cs">
       <SubType>Form</SubType>
     </Compile>
