@@ -8,11 +8,13 @@ This is a project to practice the knowledge I have. I wanted to create a School 
 
 *You can create a relation between two parents
 
-You can add new Students
+*You can add new Students
+
+*Adding an employee
 
 #Features to be added
 
-Adding an employee
+
 
 Adding a teacher (after adding an employee by selecting the department)
 
