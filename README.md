@@ -10,7 +10,7 @@ This is a project to practice the knowledge I have. I wanted to create a School 
 
 *You can add new Students
 
-*Adding an employee
+*You can add new employees
 
 #Features to be added
 
