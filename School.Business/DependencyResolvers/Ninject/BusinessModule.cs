@@ -29,9 +29,17 @@ namespace School.Business.DependencyResolvers.Ninject
 
             Bind<IStudentService>().To<StudentManager>();
             Bind<IStudentDal>().To<EfStudentDal>();
+            Bind<IEmployeeService>().To<EmployeeManager>();
+            Bind<IEmployeeDal>().To<EfEmployeeDal>();
 
-            Bind<ITeacherService>().To<TeacherManager>();
-            Bind<ITeacherDal>().To<EfTeacherDal>();
+            Bind<IBranchService>().To<BranchManager>();
+            Bind<IBranchDal>().To<EfBranchDal>();
+
+            Bind<IDepartmentService>().To<DepartmentManager>();
+            Bind<IDepartmentDal>().To<EfDepartmentDal>();
+
+            Bind<IPositionService>().To<PositionManager>();
+            Bind<IPositionDal>().To<EfPositionDal>();
         }
     }
 }

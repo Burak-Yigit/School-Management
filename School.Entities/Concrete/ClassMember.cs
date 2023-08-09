@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace School.Entities.Concrete
 {
-    public class Teacher:IEntity
+    public class ClassMember : IEntity
     {
-        public int TeacherId { get; set; }
+        public int ClassMemberId { get; set; }
+        public int ClassId { get; set; }
+        public int StudentId { get; set; }
     }
 }

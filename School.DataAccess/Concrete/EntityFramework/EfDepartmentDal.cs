@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 
 namespace School.DataAccess.Concrete.EntityFramework
 {
-    public class EfTeacherDal:EfEntityRepositoryBase<Teacher, SchoolContext>,ITeacherDal
+    public class EfDepartmentDal:EfEntityRepositoryBase<Department,SchoolContext>,IDepartmentDal
     {
-
     }
 }

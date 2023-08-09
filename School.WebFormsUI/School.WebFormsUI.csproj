@@ -56,17 +56,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddParentForms.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddParentForms.Designer.cs">
       <DependentUpon>AddParentForms.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddTeacherForms.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddTeacherForms.Designer.cs">
-      <DependentUpon>AddTeacherForms.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForms.cs">
       <SubType>Form</SubType>
@@ -88,6 +88,9 @@
     <Compile Include="StudentForms.Designer.cs">
       <DependentUpon>StudentForms.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddParentForms.resx">
       <DependentUpon>AddParentForms.cs</DependentUpon>
     </EmbeddedResource>

@@ -18,8 +18,8 @@ namespace School.Entities.Concrete
         public DateTime BirthDate { get; set; }
         public DateTime HireDate { get; set; }
         public bool IsMarried { get; set; }
-        public int StaffNumber  { get; set; }
         public decimal Salary { get; set; }
         public bool IsEmployee { get; set; }
+        public string PhoneNumber { get; set; }
     }
 }

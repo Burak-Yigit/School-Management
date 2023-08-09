@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 
 namespace School.Business.Concrete
 {
-    public class TeacherManager:ITeacherService
+    public class DepartmentManager : IDepartmentService
     {
-        private ITeacherDal _teacherDal;
-        public TeacherManager(ITeacherDal teacherDal)
+        IDepartmentDal _departmentDal;
+        public DepartmentManager(IDepartmentDal departmentDal)
         {
-            _teacherDal = teacherDal;
+            _departmentDal = departmentDal;
         }
 
-        public List<Teacher> GetAll()
+        public List<Department> GetAll()
         {
-           return _teacherDal.GetAll();
+            return _departmentDal.GetAll();
         }
     }
 }

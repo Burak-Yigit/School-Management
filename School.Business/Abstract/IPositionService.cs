@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace School.Business.Abstract
 {
-    public interface ITeacherService
+    public interface IPositionService
     {
-        List<Teacher> GetAll();
+        List<Position> GetAll();
     }
 }
