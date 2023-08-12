@@ -17,6 +17,11 @@ namespace School.Business.Concrete
             _classTeacherDal = classTeacherDal;
         }
 
+        public void Add(ClassTeacher classTeacher)
+        {
+            _classTeacherDal.Add(classTeacher);
+        }
+
         public List<ClassTeacher> GetAll()
         {
             return _classTeacherDal.GetAll();

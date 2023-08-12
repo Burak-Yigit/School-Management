@@ -19,6 +19,11 @@ namespace School.DataAccess.Concrete.EntityFramework
         public DbSet<Position> Positions { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Branch> Branches { get; set; }
+        public DbSet<Grade> Grades { get; set; }
+        public DbSet<Class> Classes { get; set; }
+        public DbSet<ClassMember> ClassMembers { get; set; }
+        public DbSet<ClassTeacher> ClassTeachers { get; set; }
+        public DbSet<ClassCode> ClassCodes { get; set; }    
 
     }
 }

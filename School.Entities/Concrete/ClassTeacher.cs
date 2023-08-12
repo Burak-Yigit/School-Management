@@ -12,6 +12,7 @@ namespace School.Entities.Concrete
         public int ClassTeacherId { get; set; }
         public int ClassId { get; set; }
         public int EmployeeId { get; set; }
+        public int LessonId { get; set; }
 
     }
 }

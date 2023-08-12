@@ -1,5 +1,6 @@
 ﻿using School.Business.Abstract;
 using School.DataAccess.Abstract;
+using School.DataAccess.Concrete.EntityFramework;
 using School.Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,16 @@ namespace School.Business.Concrete
         public List<Relation> GetAll()
         {
             return _relationDal.GetAll();
+        }
+
+        public int GetRelationId(int motherId, int fatherId)
+        {
+            var relationEntity = _relationDal.Get(p => p.MotherId == motherId && p.FatherId == fatherId);
+            if (relationEntity == null)
+            {
+                throw new Exception("Belirtilen anne ve baba ID'lerine sahip bir ilişki bulunamadı.");
+            }
+            return relationEntity.RelationId;
         }
 
         public bool RelationExists(int motherID, int fatherID)

@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,11 +45,14 @@
     <Compile Include="Abstract\IEntity.cs" />
     <Compile Include="Concrete\Branch.cs" />
     <Compile Include="Concrete\Class.cs" />
+    <Compile Include="Concrete\ClassCode.cs" />
     <Compile Include="Concrete\ClassMember.cs" />
     <Compile Include="Concrete\ClassTeacher.cs" />
     <Compile Include="Concrete\Department.cs" />
     <Compile Include="Concrete\Employee.cs" />
     <Compile Include="Concrete\Father.cs" />
+    <Compile Include="Concrete\Grade.cs" />
+    <Compile Include="Concrete\Lesson.cs" />
     <Compile Include="Concrete\Mother.cs" />
     <Compile Include="Concrete\Position.cs" />
     <Compile Include="Concrete\Relation.cs" />

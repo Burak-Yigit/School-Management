@@ -5,11 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace School.Business.Abstract
+namespace School.DataAccess.Abstract
 {
-    public interface IClassTeacherService
+    public interface IGradeDal :IEntityRepository<Grade>
     {
-        List<ClassTeacher> GetAll();
-        void Add(ClassTeacher classTeacher);
     }
 }

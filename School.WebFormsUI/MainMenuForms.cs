@@ -48,7 +48,8 @@ namespace School.WebFormsUI
 
         private void btnAddTeacher_Click(object sender, EventArgs e)
         {
-           
+            ClassListForms classListForms = new ClassListForms();
+            classListForms.ShowDialog();
         }
 
         private void btnAddEmployee_Click(object sender, EventArgs e)

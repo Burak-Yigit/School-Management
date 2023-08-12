@@ -9,6 +9,12 @@ namespace School.Business.Abstract
 {
     public interface IClassService
     {
+        void Add(Class classes);
         List<Class> GetAll();
+        Class Check(int classCodeId, int gradeId);
+        int GetClassId(int classCodeId, int GradeId);
+
+
+
     }
 }

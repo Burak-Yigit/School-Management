@@ -40,6 +40,21 @@ namespace School.Business.DependencyResolvers.Ninject
 
             Bind<IPositionService>().To<PositionManager>();
             Bind<IPositionDal>().To<EfPositionDal>();
+
+            Bind<IClassService>().To<ClassManager>();
+            Bind<IClassDal>().To<EfClassDal>();
+
+            Bind<IClassTeacherService>().To<ClassTeacherManager>();
+            Bind<IClassTeacherDal>().To<EfClassTeacherDal>();
+
+            Bind<IClassMemberService>().To<ClassMemberManager>();
+            Bind<IClassMemberDal>().To<EfClassMemberDal>();
+
+            Bind<IGradeService>().To<GradeManager>();
+            Bind<IGradeDal>().To<EfGradeDal>();
+
+            Bind<IClassCodeService>().To<ClassCodeManager>();
+            Bind<IClassCodeDal>().To<EfClassCodeDal>();
         }
     }
 }

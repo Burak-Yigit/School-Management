@@ -12,5 +12,6 @@ namespace School.Business.Abstract
         List<Relation> GetAll();
         void AddRelation(Relation relation);
         bool RelationExists(int motherID, int fatherID);
+        int GetRelationId(int motherId, int fatherId);
     }
 }

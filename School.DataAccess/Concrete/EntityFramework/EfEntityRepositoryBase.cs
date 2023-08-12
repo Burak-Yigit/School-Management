@@ -40,10 +40,10 @@ namespace School.DataAccess.Concrete.EntityFramework
                 addedEntity.State = EntityState.Added;
                 context.SaveChanges();
             }
-
         }
-       
-    }
+        
+
+}
 
 
 }

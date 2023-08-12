@@ -7,13 +7,9 @@ using System.Threading.Tasks;
 
 namespace School.Entities.Concrete
 {
-    public class Class : IEntity
+    public class ClassCode :IEntity
     {
-        public int ClassId { get; set; }
         public int ClassCodeId { get; set; }
-        public int GradeID { get; set; }
-
-        public virtual Grade Grade { get; set; }
-        public virtual ClassCode ClassCode { get; set; }
+        public string ClassCodeLetter { get; set; }
     }
 }

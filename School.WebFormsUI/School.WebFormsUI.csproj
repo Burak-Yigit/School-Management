@@ -68,6 +68,12 @@
     <Compile Include="AddParentForms.Designer.cs">
       <DependentUpon>AddParentForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassListForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassListForms.Designer.cs">
+      <DependentUpon>ClassListForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddParentForms.resx">
       <DependentUpon>AddParentForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassListForms.resx">
+      <DependentUpon>ClassListForms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForms.resx">
       <DependentUpon>LoginForms.cs</DependentUpon>

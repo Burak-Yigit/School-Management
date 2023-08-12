@@ -53,18 +53,22 @@
   <ItemGroup>
     <Compile Include="Abstract\IAuthenticatorDal.cs" />
     <Compile Include="Abstract\IBranchDal.cs" />
+    <Compile Include="Abstract\IClassCodeDal.cs" />
     <Compile Include="Abstract\IClassDal.cs" />
     <Compile Include="Abstract\IClassMemberDal.cs" />
     <Compile Include="Abstract\IClassTeacherDal.cs" />
     <Compile Include="Abstract\IDepartmentDal.cs" />
     <Compile Include="Abstract\IEntityRepository.cs" />
     <Compile Include="Abstract\IFatherDal.cs" />
+    <Compile Include="Abstract\IGradeDal.cs" />
+    <Compile Include="Abstract\ILessonDal.cs" />
     <Compile Include="Abstract\IMotherDal.cs" />
     <Compile Include="Abstract\IPositionDal.cs" />
     <Compile Include="Abstract\IRelationDal.cs" />
     <Compile Include="Abstract\IStudentDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfAuthenticatorDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfBranchDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfClassCodeDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfClassDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfClassMemberDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfClassTeacherDal.cs" />
@@ -72,6 +76,8 @@
     <Compile Include="Concrete\EntityFramework\EfEmployeeDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfEntityRepositoryBase.cs" />
     <Compile Include="Concrete\EntityFramework\EfFatherDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfGradeDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfLessonDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfMotherDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfPositionDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfRelationDal.cs" />
