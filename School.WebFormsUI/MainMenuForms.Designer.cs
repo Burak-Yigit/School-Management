@@ -38,13 +38,11 @@
             this.btnAddParent = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnAddingClassEvents = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnAddEmployee = new System.Windows.Forms.Button();
-            this.btnAddTeacher = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -56,7 +54,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(283, 222);
+            this.label1.Location = new System.Drawing.Point(214, 222);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(515, 33);
             this.label1.TabIndex = 0;
@@ -68,7 +66,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1084, 207);
+            this.pictureBox1.Size = new System.Drawing.Size(941, 207);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -131,10 +129,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button9);
-            this.groupBox2.Controls.Add(this.button10);
             this.groupBox2.Controls.Add(this.button11);
-            this.groupBox2.Controls.Add(this.button12);
-            this.groupBox2.Location = new System.Drawing.Point(713, 281);
+            this.groupBox2.Controls.Add(this.btnAddingClassEvents);
+            this.groupBox2.Location = new System.Drawing.Point(623, 281);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(330, 184);
             this.groupBox2.TabIndex = 3;
@@ -151,16 +148,6 @@
             this.button9.Text = "Remove or Change a Student\'s Class";
             this.button9.UseVisualStyleBackColor = false;
             // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FloralWhite;
-            this.button10.Location = new System.Drawing.Point(2, 99);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(156, 80);
-            this.button10.TabIndex = 7;
-            this.button10.Text = "Add Students to a Class";
-            this.button10.UseVisualStyleBackColor = false;
-            // 
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.Cornsilk;
@@ -171,24 +158,25 @@
             this.button11.Text = "Update a Class";
             this.button11.UseVisualStyleBackColor = false;
             // 
-            // button12
+            // btnAddingClassEvents
             // 
-            this.button12.BackColor = System.Drawing.Color.FloralWhite;
-            this.button12.Location = new System.Drawing.Point(2, 19);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(156, 80);
-            this.button12.TabIndex = 5;
-            this.button12.Text = "Add a New Class";
-            this.button12.UseVisualStyleBackColor = false;
+            this.btnAddingClassEvents.BackColor = System.Drawing.Color.FloralWhite;
+            this.btnAddingClassEvents.Location = new System.Drawing.Point(6, 19);
+            this.btnAddingClassEvents.Name = "btnAddingClassEvents";
+            this.btnAddingClassEvents.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnAddingClassEvents.Size = new System.Drawing.Size(156, 159);
+            this.btnAddingClassEvents.TabIndex = 5;
+            this.btnAddingClassEvents.Text = "Class Adding Events";
+            this.btnAddingClassEvents.UseVisualStyleBackColor = false;
+            this.btnAddingClassEvents.Click += new System.EventHandler(this.btnAddingClassEvents_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.btnAddEmployee);
-            this.groupBox3.Controls.Add(this.btnAddTeacher);
             this.groupBox3.Location = new System.Drawing.Point(377, 281);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(330, 184);
+            this.groupBox3.Size = new System.Drawing.Size(228, 184);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Teacher Registration and Update Panels";
@@ -196,11 +184,11 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Cornsilk;
-            this.button1.Location = new System.Drawing.Point(219, 19);
+            this.button1.Location = new System.Drawing.Point(117, 20);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 159);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Update a Teacher";
+            this.button1.Text = "Update an Employee";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // btnAddEmployee
@@ -214,22 +202,10 @@
             this.btnAddEmployee.UseVisualStyleBackColor = false;
             this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
-            // btnAddTeacher
-            // 
-            this.btnAddTeacher.BackColor = System.Drawing.Color.FloralWhite;
-            this.btnAddTeacher.Location = new System.Drawing.Point(112, 19);
-            this.btnAddTeacher.Name = "btnAddTeacher";
-            this.btnAddTeacher.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnAddTeacher.Size = new System.Drawing.Size(105, 159);
-            this.btnAddTeacher.TabIndex = 5;
-            this.btnAddTeacher.Text = "Add a Teacher";
-            this.btnAddTeacher.UseVisualStyleBackColor = false;
-            this.btnAddTeacher.Click += new System.EventHandler(this.btnAddTeacher_Click);
-            // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnLogout.Location = new System.Drawing.Point(881, 489);
+            this.btnLogout.Location = new System.Drawing.Point(797, 489);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(156, 44);
             this.btnLogout.TabIndex = 4;
@@ -242,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1108, 545);
+            this.ClientSize = new System.Drawing.Size(970, 545);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -274,11 +250,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button btnAddEmployee;
-        private System.Windows.Forms.Button btnAddTeacher;
+        private System.Windows.Forms.Button btnAddingClassEvents;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button button1;
     }

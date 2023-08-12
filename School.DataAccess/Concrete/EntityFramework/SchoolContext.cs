@@ -24,6 +24,7 @@ namespace School.DataAccess.Concrete.EntityFramework
         public DbSet<ClassMember> ClassMembers { get; set; }
         public DbSet<ClassTeacher> ClassTeachers { get; set; }
         public DbSet<ClassCode> ClassCodes { get; set; }    
+        public DbSet<Lesson> Lessons { get; set; }    
 
     }
 }

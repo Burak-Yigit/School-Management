@@ -26,6 +26,7 @@ namespace School.WebFormsUI
             _employeeService = InstanceFactory.GetInstance<IEmployeeService>();
             _gradeService = InstanceFactory.GetInstance<IGradeService>();
             _classCodeService= InstanceFactory.GetInstance<IClassCodeService>();
+            _lessonService= InstanceFactory.GetInstance<ILessonService>();
 
         }
         IClassService _classService;
@@ -34,12 +35,13 @@ namespace School.WebFormsUI
         IEmployeeService _employeeService;
         IGradeService _gradeService;
         IClassCodeService _classCodeService;
+        ILessonService _lessonService;
         private void ClassListForms_Load(object sender, EventArgs e)
         {
             LoadEmployees();
             LoadClassesList();
             LoadClassesForTeacherList();
-
+            LoadLessons();
         }
         private void LoadEmployees()
         {
@@ -99,6 +101,12 @@ namespace School.WebFormsUI
                 MessageBox.Show(exception.Message);
             }
         }
+        private void LoadLessons()
+        {
+            cmbxLessons.DataSource = _lessonService.GetAll();
+            cmbxLessons.DisplayMember = "LessonName";
+            cmbxLessons.ValueMember = "LessonId";
+        }
        
         private void btnAddTeacherToClass_Click(object sender, EventArgs e)
         {
@@ -112,7 +120,8 @@ namespace School.WebFormsUI
                     _classTeacherService.Add(new ClassTeacher
                     {
                         ClassId = Convert.ToInt32(_classService.GetClassId(classId, gradeId)),
-                        EmployeeId =Convert.ToInt32(cmbxTeacherId.SelectedValue)
+                        EmployeeId =Convert.ToInt32(cmbxTeacherId.SelectedValue),
+                        LessonId = Convert.ToInt32(cmbxLessons.SelectedValue)
                     });
                     MessageBox.Show("Added");
                 }
@@ -134,6 +143,10 @@ namespace School.WebFormsUI
                     ClassCodeId = classId,
                     GradeID = gradeId
                 });
+
+                string gradeNumber = cmbxGradeId.Text;
+                string classCode = cmbxClassCode.Text;
+                MessageBox.Show($"{gradeNumber}-{classCode} class has successfully been added.");
             }
             else
             {

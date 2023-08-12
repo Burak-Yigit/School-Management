@@ -55,6 +55,9 @@ namespace School.Business.DependencyResolvers.Ninject
 
             Bind<IClassCodeService>().To<ClassCodeManager>();
             Bind<IClassCodeDal>().To<EfClassCodeDal>();
+
+            Bind<ILessonService>().To<LessonManager>();
+            Bind<ILessonDal>().To<EfLessonDal>();
         }
     }
 }

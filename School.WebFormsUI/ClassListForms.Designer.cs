@@ -166,12 +166,12 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.btnAddTeacherToClass);
             this.groupBox2.Controls.Add(this.cmbxTGrade);
-            this.groupBox2.Location = new System.Drawing.Point(255, 22);
+            this.groupBox2.Location = new System.Drawing.Point(247, 22);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 201);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Add a Teacher to a Class";
+            this.groupBox2.Text = "Add a Teacher to a class";
             // 
             // cmbxLessons
             // 

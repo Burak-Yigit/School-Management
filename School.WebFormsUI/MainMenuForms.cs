@@ -46,16 +46,18 @@ namespace School.WebFormsUI
             studentForm.ShowDialog();
         }
 
-        private void btnAddTeacher_Click(object sender, EventArgs e)
-        {
-            ClassListForms classListForms = new ClassListForms();
-            classListForms.ShowDialog();
-        }
+       
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
           AddEmployee addEmployee = new AddEmployee();
           addEmployee.ShowDialog();
+        }
+
+        private void btnAddingClassEvents_Click(object sender, EventArgs e)
+        {
+            ClassListForms classListForms = new ClassListForms();
+            classListForms.ShowDialog();
         }
     }
 }

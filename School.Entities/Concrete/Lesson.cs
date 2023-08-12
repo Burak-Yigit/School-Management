@@ -9,5 +9,7 @@ namespace School.Entities.Concrete
 {
     public class Lesson : IEntity
     {
+        public int LessonId { get; set; }
+        public string LessonName { get; set; }
     }
 }
