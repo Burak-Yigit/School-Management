@@ -47,6 +47,7 @@ namespace School.DataAccess.Concrete.EntityFramework
             using(TContext context = new TContext())
             {
                 var updatedEntity=context.Entry(entity);
+                updatedEntity.State = EntityState.Modified;
                 context.SaveChanges();
             }
         }

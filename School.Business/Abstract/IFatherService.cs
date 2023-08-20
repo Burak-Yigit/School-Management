@@ -11,6 +11,6 @@ namespace School.Business.Abstract
     {
         List<Father> GetAll();
         void Add(Father father);
-
+        void Update(Father father);
     }
 }

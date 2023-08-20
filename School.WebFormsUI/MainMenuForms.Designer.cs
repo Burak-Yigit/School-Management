@@ -32,16 +32,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnUpdateStudent = new System.Windows.Forms.Button();
             this.btnAddStudent = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnUpdateParent = new System.Windows.Forms.Button();
             this.btnAddParent = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnUpdateClass = new System.Windows.Forms.Button();
             this.btnAddingClassEvents = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUpdateEmployee = new System.Windows.Forms.Button();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,9 +72,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.btnUpdateStudent);
             this.groupBox1.Controls.Add(this.btnAddStudent);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnUpdateParent);
             this.groupBox1.Controls.Add(this.btnAddParent);
             this.groupBox1.Location = new System.Drawing.Point(23, 281);
             this.groupBox1.Name = "groupBox1";
@@ -84,15 +83,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Registration and Update Panels";
             // 
-            // button5
+            // btnUpdateStudent
             // 
-            this.button5.BackColor = System.Drawing.Color.Cornsilk;
-            this.button5.Location = new System.Drawing.Point(168, 99);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(156, 80);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Update a Student";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnUpdateStudent.BackColor = System.Drawing.Color.Cornsilk;
+            this.btnUpdateStudent.Location = new System.Drawing.Point(168, 99);
+            this.btnUpdateStudent.Name = "btnUpdateStudent";
+            this.btnUpdateStudent.Size = new System.Drawing.Size(156, 80);
+            this.btnUpdateStudent.TabIndex = 4;
+            this.btnUpdateStudent.Text = "Update a Student";
+            this.btnUpdateStudent.UseVisualStyleBackColor = false;
+            this.btnUpdateStudent.Click += new System.EventHandler(this.btnUpdateStudent_Click);
             // 
             // btnAddStudent
             // 
@@ -105,15 +105,16 @@
             this.btnAddStudent.UseVisualStyleBackColor = false;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
-            // button2
+            // btnUpdateParent
             // 
-            this.button2.BackColor = System.Drawing.Color.Cornsilk;
-            this.button2.Location = new System.Drawing.Point(168, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 80);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Update a Parent";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnUpdateParent.BackColor = System.Drawing.Color.Cornsilk;
+            this.btnUpdateParent.Location = new System.Drawing.Point(168, 19);
+            this.btnUpdateParent.Name = "btnUpdateParent";
+            this.btnUpdateParent.Size = new System.Drawing.Size(156, 80);
+            this.btnUpdateParent.TabIndex = 1;
+            this.btnUpdateParent.Text = "Update a Parent";
+            this.btnUpdateParent.UseVisualStyleBackColor = false;
+            this.btnUpdateParent.Click += new System.EventHandler(this.btnUpdateParent_Click);
             // 
             // btnAddParent
             // 
@@ -128,8 +129,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button9);
-            this.groupBox2.Controls.Add(this.button11);
+            this.groupBox2.Controls.Add(this.btnUpdateClass);
             this.groupBox2.Controls.Add(this.btnAddingClassEvents);
             this.groupBox2.Location = new System.Drawing.Point(623, 281);
             this.groupBox2.Name = "groupBox2";
@@ -138,25 +138,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Class Registration and Update Panels";
             // 
-            // button9
+            // btnUpdateClass
             // 
-            this.button9.BackColor = System.Drawing.Color.DarkSalmon;
-            this.button9.Location = new System.Drawing.Point(168, 99);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(156, 80);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "Remove or Change a Student\'s Class";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Cornsilk;
-            this.button11.Location = new System.Drawing.Point(168, 19);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(156, 80);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "Update a Class";
-            this.button11.UseVisualStyleBackColor = false;
+            this.btnUpdateClass.BackColor = System.Drawing.Color.Cornsilk;
+            this.btnUpdateClass.Location = new System.Drawing.Point(168, 19);
+            this.btnUpdateClass.Name = "btnUpdateClass";
+            this.btnUpdateClass.Size = new System.Drawing.Size(156, 159);
+            this.btnUpdateClass.TabIndex = 6;
+            this.btnUpdateClass.Text = "Update a Class";
+            this.btnUpdateClass.UseVisualStyleBackColor = false;
+            this.btnUpdateClass.Click += new System.EventHandler(this.btnUpdateClass_Click);
             // 
             // btnAddingClassEvents
             // 
@@ -172,7 +163,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.btnUpdateEmployee);
             this.groupBox3.Controls.Add(this.btnAddEmployee);
             this.groupBox3.Location = new System.Drawing.Point(377, 281);
             this.groupBox3.Name = "groupBox3";
@@ -181,15 +172,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Teacher Registration and Update Panels";
             // 
-            // button1
+            // btnUpdateEmployee
             // 
-            this.button1.BackColor = System.Drawing.Color.Cornsilk;
-            this.button1.Location = new System.Drawing.Point(117, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 159);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Update an Employee";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnUpdateEmployee.BackColor = System.Drawing.Color.Cornsilk;
+            this.btnUpdateEmployee.Location = new System.Drawing.Point(117, 20);
+            this.btnUpdateEmployee.Name = "btnUpdateEmployee";
+            this.btnUpdateEmployee.Size = new System.Drawing.Size(105, 159);
+            this.btnUpdateEmployee.TabIndex = 7;
+            this.btnUpdateEmployee.Text = "Update an Employee";
+            this.btnUpdateEmployee.UseVisualStyleBackColor = false;
+            this.btnUpdateEmployee.Click += new System.EventHandler(this.btnUpdateEmployee_Click);
             // 
             // btnAddEmployee
             // 
@@ -243,17 +235,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnUpdateParent;
         private System.Windows.Forms.Button btnAddParent;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnUpdateStudent;
         private System.Windows.Forms.Button btnAddStudent;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnUpdateClass;
         private System.Windows.Forms.Button btnAddEmployee;
         private System.Windows.Forms.Button btnAddingClassEvents;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUpdateEmployee;
     }
 }

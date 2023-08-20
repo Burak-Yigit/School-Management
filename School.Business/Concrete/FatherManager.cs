@@ -21,10 +21,16 @@ namespace School.Business.Concrete
         {
             _fatherDal.Add(father);
         }
+        public void Update(Father father)
+        {
+            _fatherDal.Update(father);
+        }
 
         public List<Father> GetAll()
         {
             return _fatherDal.GetAll();
         }
+
+        
     }
 }

@@ -27,5 +27,10 @@ namespace School.Business.Concrete
         {
             return _motherDal.GetAll();
         }
+
+        public void Update(Mother mother)
+        {
+            _motherDal.Update(mother);
+        }
     }
 }

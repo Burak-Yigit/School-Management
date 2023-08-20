@@ -59,5 +59,26 @@ namespace School.WebFormsUI
             ClassListForms classListForms = new ClassListForms();
             classListForms.ShowDialog();
         }
+
+        private void btnUpdateStudent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdateParent_Click(object sender, EventArgs e)
+        {
+            UpdateParent updateParent = new UpdateParent();
+            updateParent.ShowDialog();
+        }
+
+        private void btnUpdateEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdateClass_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
