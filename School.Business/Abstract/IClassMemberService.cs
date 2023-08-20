@@ -9,6 +9,7 @@ namespace School.Business.Abstract
 {
     public interface IClassMemberService
     {
+        void Add(ClassMember classMember);
         List<ClassMember> GetAll();
     }
 }

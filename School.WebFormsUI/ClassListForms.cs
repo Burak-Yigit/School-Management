@@ -17,6 +17,7 @@ namespace School.WebFormsUI
 {
     public partial class ClassListForms : Form
     {
+        SchoolContext _context = new SchoolContext();
         public ClassListForms()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace School.WebFormsUI
             _gradeService = InstanceFactory.GetInstance<IGradeService>();
             _classCodeService= InstanceFactory.GetInstance<IClassCodeService>();
             _lessonService= InstanceFactory.GetInstance<ILessonService>();
+            _studentService  = InstanceFactory.GetInstance<IStudentService>();
 
         }
         IClassService _classService;
@@ -36,12 +38,18 @@ namespace School.WebFormsUI
         IGradeService _gradeService;
         IClassCodeService _classCodeService;
         ILessonService _lessonService;
+        IStudentService _studentService;
         private void ClassListForms_Load(object sender, EventArgs e)
         {
+            LoadEmployees();
             LoadEmployees();
             LoadClassesList();
             LoadClassesForTeacherList();
             LoadLessons();
+            LoadStudents();
+            LoadClassesForStudents();
+            TeacherList();
+            StudentList();
         }
         private void LoadEmployees()
         {
@@ -64,7 +72,31 @@ namespace School.WebFormsUI
             catch (Exception ex)
             {
                 // Handle any exceptions that may occur during data retrieval.
-                MessageBox.Show("An error occurred while loading the father list: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while loading the Teacher list: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void LoadStudents()
+        {
+            try
+            {
+                List<Student> students = _studentService.GetAll();
+                cmbxLStudentName.DataSource = students;
+
+                // Set a custom DisplayMember using the Format event of the ComboBox
+                cmbxLStudentName.Format += (sender, e) =>
+                {
+                    if (e.ListItem is Student student)
+                    {
+                        e.Value = $"{student.FirstName} {student.LastName}";
+                    }
+                };
+
+                cmbxLStudentName.ValueMember = "StudentId";
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that may occur during data retrieval.
+                MessageBox.Show("An error occurred while loading the Student list: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void LoadClassesList()
@@ -106,6 +138,16 @@ namespace School.WebFormsUI
             cmbxLessons.DataSource = _lessonService.GetAll();
             cmbxLessons.DisplayMember = "LessonName";
             cmbxLessons.ValueMember = "LessonId";
+        }
+        private void LoadClassesForStudents()
+        {
+            cmbxLGrade.DataSource = _gradeService.GetAll();
+            cmbxLGrade.DisplayMember = "GradeNumber";
+            cmbxLGrade.ValueMember = "GradeId";
+
+            cmbxLClass.DataSource = _classCodeService.GetAll();
+            cmbxLClass.DisplayMember = "ClassCodeLetter";
+            cmbxLClass.ValueMember = "ClassCodeId";
         }
        
         private void btnAddTeacherToClass_Click(object sender, EventArgs e)
@@ -155,10 +197,71 @@ namespace School.WebFormsUI
             }
            
         }
+        private void TeacherList()
+        {
+            try
+            {
+                var dbRelations = (from cm in _context.ClassTeachers
+                                   join l in _context.Lessons on cm.LessonId equals l.LessonId
+                                   join c in _context.Classes on cm.ClassId equals c.ClassId
+                                   join cg in _context.Grades on c.GradeID equals cg.GradeId
+                                   join cc in _context.ClassCodes on c.ClassCodeId equals cc.ClassCodeId
+                                   join e in _context.Employees on cm.EmployeeId equals e.EmployeeId
+                                   select new
+                                   {
+                                       cm.ClassTeacherId,
+                                       c.ClassId,
+                                       e.EmployeeId,
+                                       l.LessonId,
+                                       l.LessonName,
+                                       cg.GradeNumber,
+                                       cc.ClassCodeLetter,
+                                       e.FirstName,
+                                       e.LastName,
 
+                                   }).ToList();
+                var teacherList = dbRelations.Select(r => new
+                {
+                    ClassTeacherId = r.ClassTeacherId,
+                    ClassId = r.ClassId,
+                    EmployeeId = r.EmployeeId,
+                    LessonId = r.LessonId,
+                    DisplayText = $"{r.GradeNumber}-{r.ClassCodeLetter} {r.FirstName} {r.LastName} {r.LessonName}"
+                }).ToList();
+
+                dgvTeacherList.DataSource = teacherList;
+                dgvTeacherList.Columns["DisplayText"].HeaderText = "Class Teacher";
+                dgvTeacherList.Columns["ClassTeacherId"].Visible = false;
+                dgvTeacherList.Columns["ClassId"].Visible = false;
+                dgvTeacherList.Columns["EmployeeId"].Visible = false;
+                dgvTeacherList.Columns["LessonId"].Visible = false;
+            }
+            catch (Exception exception)
+            {
+
+                MessageBox.Show(exception.Message);
+            }
+           
+        }
+        private void StudentList()
+        {
+            dgvStudentList.DataSource = _classMemberService.GetAll();
+        }
         private void cmbxTeacherId_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddStudentToClass_Click(object sender, EventArgs e)
+        {
+            int classId = Convert.ToInt32(cmbxLClass.SelectedValue);
+            int gradeId = Convert.ToInt32(cmbxLGrade.SelectedValue);
+            _classMemberService.Add(new ClassMember
+            {
+                ClassId= Convert.ToInt32(_classService.GetClassId(classId, gradeId)),
+                StudentId = Convert.ToInt32(cmbxLStudentName.SelectedValue)
+            });
+            MessageBox.Show($"{cmbxLStudentName.Text} has successfully been added to {cmbxLGrade.Text}-{cmbxLClass.Text} class!");
         }
     }
 }

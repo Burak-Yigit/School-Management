@@ -17,6 +17,11 @@ namespace School.Business.Concrete
             _classMemberDal = classMemberDal;
         }
 
+        public void Add(ClassMember classMember)
+        {
+            _classMemberDal.Add(classMember);
+        }
+
         public List<ClassMember> GetAll()
         {
             return _classMemberDal.GetAll();

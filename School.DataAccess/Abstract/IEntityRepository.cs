@@ -13,6 +13,7 @@ namespace School.DataAccess.Abstract
         List<T> GetAll(Expression<Func<T, bool>> filter = null);
         T Get(Expression<Func<T, bool>> filter);
         void Add(T entity);
+        void Update(T entity);
        
     }
 }
