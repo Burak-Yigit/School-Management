@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvRelations = new System.Windows.Forms.DataGridView();
-            this.btnAddRelation = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmbxFather = new System.Windows.Forms.ComboBox();
-            this.cmbxMother = new System.Windows.Forms.ComboBox();
             this.dgvFatherList = new System.Windows.Forms.DataGridView();
             this.dgvMotherList = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -54,64 +48,11 @@
             this.btnDeleteMother = new System.Windows.Forms.Button();
             this.btnDeleteFather = new System.Windows.Forms.Button();
             this.btnUpdateFather = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRelations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFatherList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMotherList)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dgvRelations
-            // 
-            this.dgvRelations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRelations.Location = new System.Drawing.Point(200, 543);
-            this.dgvRelations.Name = "dgvRelations";
-            this.dgvRelations.Size = new System.Drawing.Size(367, 116);
-            this.dgvRelations.TabIndex = 25;
-            // 
-            // btnAddRelation
-            // 
-            this.btnAddRelation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddRelation.Location = new System.Drawing.Point(598, 212);
-            this.btnAddRelation.Name = "btnAddRelation";
-            this.btnAddRelation.Size = new System.Drawing.Size(121, 35);
-            this.btnAddRelation.TabIndex = 24;
-            this.btnAddRelation.Text = "Add Relation";
-            this.btnAddRelation.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(598, 150);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 13);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "Father\'s Name";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(598, 88);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 13);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Mother\'s Name";
-            // 
-            // cmbxFather
-            // 
-            this.cmbxFather.FormattingEnabled = true;
-            this.cmbxFather.Location = new System.Drawing.Point(598, 175);
-            this.cmbxFather.Name = "cmbxFather";
-            this.cmbxFather.Size = new System.Drawing.Size(121, 21);
-            this.cmbxFather.TabIndex = 21;
-            // 
-            // cmbxMother
-            // 
-            this.cmbxMother.FormattingEnabled = true;
-            this.cmbxMother.Location = new System.Drawing.Point(598, 115);
-            this.cmbxMother.Name = "cmbxMother";
-            this.cmbxMother.Size = new System.Drawing.Size(121, 21);
-            this.cmbxMother.TabIndex = 20;
             // 
             // dgvFatherList
             // 
@@ -121,7 +62,7 @@
             this.dgvFatherList.Location = new System.Drawing.Point(403, 294);
             this.dgvFatherList.Name = "dgvFatherList";
             this.dgvFatherList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvFatherList.Size = new System.Drawing.Size(330, 243);
+            this.dgvFatherList.Size = new System.Drawing.Size(385, 268);
             this.dgvFatherList.TabIndex = 19;
             this.dgvFatherList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFatherList_CellClick);
             // 
@@ -130,10 +71,10 @@
             this.dgvMotherList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMotherList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvMotherList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMotherList.Location = new System.Drawing.Point(67, 294);
+            this.dgvMotherList.Location = new System.Drawing.Point(12, 294);
             this.dgvMotherList.Name = "dgvMotherList";
             this.dgvMotherList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvMotherList.Size = new System.Drawing.Size(330, 243);
+            this.dgvMotherList.Size = new System.Drawing.Size(385, 268);
             this.dgvMotherList.TabIndex = 18;
             this.dgvMotherList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMotherList_CellClick);
             // 
@@ -147,7 +88,7 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.mtbxFPhoneNumber);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(323, 52);
+            this.groupBox2.Location = new System.Drawing.Point(489, 52);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(244, 211);
             this.groupBox2.TabIndex = 17;
@@ -220,7 +161,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.mtbxMPhoneNumber);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(73, 52);
+            this.groupBox1.Location = new System.Drawing.Point(67, 52);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(244, 211);
             this.groupBox1.TabIndex = 16;
@@ -307,6 +248,7 @@
             this.btnDeleteMother.TabIndex = 7;
             this.btnDeleteMother.Text = "Delete";
             this.btnDeleteMother.UseVisualStyleBackColor = false;
+            this.btnDeleteMother.Click += new System.EventHandler(this.btnDeleteMother_Click);
             // 
             // btnDeleteFather
             // 
@@ -319,6 +261,7 @@
             this.btnDeleteFather.TabIndex = 9;
             this.btnDeleteFather.Text = "Delete";
             this.btnDeleteFather.UseVisualStyleBackColor = false;
+            this.btnDeleteFather.Click += new System.EventHandler(this.btnDeleteFather_Click);
             // 
             // btnUpdateFather
             // 
@@ -337,13 +280,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 710);
-            this.Controls.Add(this.dgvRelations);
-            this.Controls.Add(this.btnAddRelation);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.cmbxFather);
-            this.Controls.Add(this.cmbxMother);
+            this.ClientSize = new System.Drawing.Size(800, 573);
             this.Controls.Add(this.dgvFatherList);
             this.Controls.Add(this.dgvMotherList);
             this.Controls.Add(this.groupBox2);
@@ -352,7 +289,6 @@
             this.Name = "UpdateParent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateParent";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRelations)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFatherList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMotherList)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -360,18 +296,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvRelations;
-        private System.Windows.Forms.Button btnAddRelation;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cmbxFather;
-        private System.Windows.Forms.ComboBox cmbxMother;
         private System.Windows.Forms.DataGridView dgvFatherList;
         private System.Windows.Forms.DataGridView dgvMotherList;
         private System.Windows.Forms.GroupBox groupBox2;

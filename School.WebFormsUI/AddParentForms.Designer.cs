@@ -46,10 +46,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dgvMotherList = new System.Windows.Forms.DataGridView();
             this.dgvFatherList = new System.Windows.Forms.DataGridView();
+            this.cmbxMother = new System.Windows.Forms.ComboBox();
+            this.cmbxFather = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnAddRelation = new System.Windows.Forms.Button();
+            this.dgvRelations = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMotherList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFatherList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRelations)).BeginInit();
             this.SuspendLayout();
             // 
             // tbxMFirstName
@@ -146,7 +153,7 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.mtbxFPhoneNumber);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(428, 12);
+            this.groupBox2.Location = new System.Drawing.Point(262, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(244, 211);
             this.groupBox2.TabIndex = 7;
@@ -245,11 +252,70 @@
             this.dgvFatherList.Size = new System.Drawing.Size(330, 243);
             this.dgvFatherList.TabIndex = 9;
             // 
+            // cmbxMother
+            // 
+            this.cmbxMother.FormattingEnabled = true;
+            this.cmbxMother.Location = new System.Drawing.Point(537, 75);
+            this.cmbxMother.Name = "cmbxMother";
+            this.cmbxMother.Size = new System.Drawing.Size(121, 21);
+            this.cmbxMother.TabIndex = 10;
+            // 
+            // cmbxFather
+            // 
+            this.cmbxFather.FormattingEnabled = true;
+            this.cmbxFather.Location = new System.Drawing.Point(537, 135);
+            this.cmbxFather.Name = "cmbxFather";
+            this.cmbxFather.Size = new System.Drawing.Size(121, 21);
+            this.cmbxFather.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(537, 48);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Mother\'s Name";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(537, 110);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Father\'s Name";
+            // 
+            // btnAddRelation
+            // 
+            this.btnAddRelation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddRelation.Location = new System.Drawing.Point(537, 172);
+            this.btnAddRelation.Name = "btnAddRelation";
+            this.btnAddRelation.Size = new System.Drawing.Size(121, 35);
+            this.btnAddRelation.TabIndex = 14;
+            this.btnAddRelation.Text = "Add Relation";
+            this.btnAddRelation.UseVisualStyleBackColor = true;
+            this.btnAddRelation.Click += new System.EventHandler(this.btnAddRelation_Click);
+            // 
+            // dgvRelations
+            // 
+            this.dgvRelations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRelations.Location = new System.Drawing.Point(139, 503);
+            this.dgvRelations.Name = "dgvRelations";
+            this.dgvRelations.Size = new System.Drawing.Size(367, 116);
+            this.dgvRelations.TabIndex = 15;
+            // 
             // AddParentForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 631);
+            this.Controls.Add(this.dgvRelations);
+            this.Controls.Add(this.btnAddRelation);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cmbxFather);
+            this.Controls.Add(this.cmbxMother);
             this.Controls.Add(this.dgvFatherList);
             this.Controls.Add(this.dgvMotherList);
             this.Controls.Add(this.groupBox2);
@@ -264,7 +330,9 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMotherList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFatherList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRelations)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -288,5 +356,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgvMotherList;
         private System.Windows.Forms.DataGridView dgvFatherList;
+        private System.Windows.Forms.ComboBox cmbxMother;
+        private System.Windows.Forms.ComboBox cmbxFather;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnAddRelation;
+        private System.Windows.Forms.DataGridView dgvRelations;
     }
 }
