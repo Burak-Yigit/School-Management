@@ -12,14 +12,19 @@ This is a project to practice the knowledge I have. I wanted to create a School 
 
 *You can add new employees
 
+*You can add new teachers
+
+*You can add a new classroom
+
+*You can add teachers to a particular classroom (like a schedule for class hours)
+
+*You can add students to the classroom.
+
+*Update feature for parents added.
+
 #Features to be added
 
+*Update feature for all sections will be added. 
 
 
-Adding a teacher (after adding an employee by selecting the department)
 
-Adding a classroom
-
-Adding teachers to a particular classroom (like a schedule for class hours)
-
-Adding students to the classroom.
