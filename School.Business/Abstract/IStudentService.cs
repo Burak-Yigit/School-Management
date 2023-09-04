@@ -11,6 +11,6 @@ namespace School.Business.Abstract
     {
         List<Student> GetAll();
         void Add(Student student);
-
+        void Update(Student student);
     }
 }

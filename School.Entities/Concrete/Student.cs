@@ -17,6 +17,7 @@ namespace School.Entities.Concrete
         public DateTime Birthdate { get; set; }
         public DateTime RegistrationDate { get; set; }
         public string Gender { get; set; }
+        public bool IsActive { get; set; }
 
     }
 }

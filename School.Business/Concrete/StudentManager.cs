@@ -26,5 +26,10 @@ namespace School.Business.Concrete
         {
             return _studentDal.GetAll();
         }
+
+        public void Update(Student student)
+        {
+            _studentDal.Update(student);
+        }
     }
 }

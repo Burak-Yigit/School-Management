@@ -62,7 +62,8 @@ namespace School.WebFormsUI
 
         private void btnUpdateStudent_Click(object sender, EventArgs e)
         {
-
+            UpdateStudent updateStudent = new UpdateStudent();
+            updateStudent.ShowDialog();
         }
 
         private void btnUpdateParent_Click(object sender, EventArgs e)
