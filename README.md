@@ -21,6 +21,7 @@ This is a project to practice the knowledge I have. I wanted to create a School 
 *You can add students to the classroom.
 
 *Update feature for parents added.
+*Update feature for students added.
 
 #Features to be added
 
