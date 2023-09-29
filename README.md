@@ -27,5 +27,12 @@ This is a project to practice the knowledge I have. I wanted to create a School 
 
 *Update feature for all sections will be added. 
 
+#How to Install
+
+*First, add the 'SchoolDb.sql' file, which is in the 'SchoolDB' folder, to your database.
+
+*Set up the 'app.config' file for School.WebFormsUI."
+
+*If you have completed the steps above, you will be able to run the program without any issues.
 
 
